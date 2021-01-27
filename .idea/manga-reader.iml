@@ -2,7 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/client">
-      <excludeFolder url="file://$MODULE_DIR$/client/.idea" />
+      <sourceFolder url="file://$MODULE_DIR$/client/test" isTestSource="true" />
     </content>
     <content url="file://$MODULE_DIR$/server-js" />
     <orderEntry type="inheritedJdk" />
