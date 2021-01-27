@@ -11,10 +11,12 @@ Vue.use(VueMaterial)
 import store from '@/store/store'
 import router from '@/routes'
 import {$axios} from '@/service/axios'
+import {setupInterceptors} from '@/service/interceptors'
 
+setupInterceptors($axios)
 Vue.prototype.$http = $axios
-Vue.config.productionTip = false
 
+Vue.config.productionTip = false
 import App from './components/App.vue'
 
 new Vue({

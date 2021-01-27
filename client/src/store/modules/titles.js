@@ -1,5 +1,8 @@
-import {extractError, processRequest} from '@/service/axios'
-import service from '@/service/api/titles'
+import {extractError, processRequest} from '@/service/utils'
+import titlesService from '@/service/api/titles'
+import {$axios} from '@/service/axios'
+
+const service = titlesService($axios)
 
 export const titlesStore = {
     namespaced: true,
@@ -11,10 +14,7 @@ export const titlesStore = {
             state.titles = titles
         },
         removeTitle(state, titleId) {
-            state.titles.splice(
-                state.titles.findIndex(t => t.id === titleId),
-                1
-            )
+            state.titles.splice(state.titles.findIndex(t => t.id === titleId), 1)
         },
         addTitle(state, title) {
             state.titles.push(title)

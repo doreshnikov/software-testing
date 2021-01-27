@@ -1,5 +1,8 @@
-import {extractError, processRequest} from '@/service/axios'
-import service from '@/service/api/user'
+import {extractError, processRequest} from '@/service/utils'
+import userService from '@/service/api/user'
+import {$axios} from '@/service/axios'
+
+const service = userService($axios)
 
 export const userStore = {
     namespaced: true,
