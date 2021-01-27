@@ -45,7 +45,7 @@ export default {
     authenticate() {
       this.isLoading = true
       this.error = null
-      this.$store.dispatch('user/login', this.formData).then(() => {
+      return this.$store.dispatch('user/login', this.formData).then(() => {
         this.$router.replace('/')
       }).catch(err => {
         this.error = err.view

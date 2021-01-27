@@ -1,5 +1,4 @@
 import {mount, shallowMount} from '@vue/test-utils'
-import Vuex from 'vuex'
 import TitleCard from '@/components/pages/home/TitleCard'
 import HomePage from '@/components/pages/home/HomePage'
 
