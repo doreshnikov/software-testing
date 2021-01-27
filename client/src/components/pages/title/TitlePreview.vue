@@ -2,22 +2,22 @@
   <div>
     <div class='info-container'>
       <aspect-ratio-container :ratio="1.4">
-        <img :src='title.image' alt='Preview'>
+        <img class='title-preview-cover' :src='title.image' alt='Preview'>
       </aspect-ratio-container>
     </div>
     <div class='info-container info-container-wide md-elevation-3'>
       <md-toolbar class='md-elevation-2'>
-        <span class='md-title'>{{ title.name }}</span>
+        <span class='md-title title-preview-name'>{{ title.name }}</span>
       </md-toolbar>
       <md-list class='md-double-line'>
         <md-subheader>Description</md-subheader>
         <md-list-item>
           <md-icon>info</md-icon>
-          <div class='md-list-item-text'>{{ title.description }}</div>
+          <div class='md-list-item-text title-preview-description'>{{ title.description }}</div>
         </md-list-item>
         <md-list-item>
           <md-icon>library_books</md-icon>
-          <div class='md-list-item-text'>{{ title.chapters + ' chapters' }}</div>
+          <div class='md-list-item-text title-preview-chapters'>{{ title.chapters + ' chapters' }}</div>
         </md-list-item>
       </md-list>
     </div>

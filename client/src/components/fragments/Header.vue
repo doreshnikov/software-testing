@@ -3,7 +3,7 @@
     <md-toolbar class='md-primary'>
       <div class='md-toolbar-section-start'>
         <md-tabs class='md-primary' md-sync-route>
-          <md-tab class='first-tab' id='tab-home' md-label='Home' to='/' exact/>
+          <md-tab id='tab-home' md-label='Home' to='/' exact/>
           <div v-if='!isLoggedIn'>
             <md-tab id='tab-register' md-label='Register' to='/register'/>
             <md-tab id='tab-login' md-label='Login' to='/login'/>
@@ -11,9 +11,9 @@
         </md-tabs>
       </div>
       <div class='md-toolbar-section-end'>
-        <md-button class='md-raised md-accent' @click='showFetchError = true' v-if='fetchError !== null'>Error occurred
+        <md-button class='md-raised md-accent header-error' @click='showFetchError = true' v-if='fetchError !== null'>Error occurred
         </md-button>
-        <md-menu v-if='isLoggedIn' md-align-trigger>
+        <md-menu class='header-login' v-if='isLoggedIn' md-align-trigger>
           <md-button md-menu-trigger>{{ login }}</md-button>
           <md-menu-content>
             <md-menu-item @click='logout'>Log out</md-menu-item>

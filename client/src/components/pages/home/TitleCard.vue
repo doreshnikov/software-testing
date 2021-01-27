@@ -4,16 +4,17 @@
       <md-card-media-cover md-solid>
         <md-card-media>
           <aspect-ratio-container :ratio="1.4">
-            <img :src='title.image' alt='Preview'>
+            <img class='title-card-cover' :src='title.image' alt='Preview'>
           </aspect-ratio-container>
         </md-card-media>
         <md-card-area>
           <md-card-header>
-            <div class='md-title'>{{ title.name }}</div>
+            <div class='md-title title-card-name'>{{ title.name }}</div>
           </md-card-header>
           <md-card-actions>
-            <md-button class='md-dense md-raised md-primary' @click='openTitle'>Explore</md-button>
-            <md-button class='md-dense md-raised md-accent md-icon-button' v-if='isLoggedIn' @click='removeThisTitle'>
+            <md-button class='md-dense md-raised md-primary title-card-action' @click='openTitle'>Explore</md-button>
+            <md-button class='md-dense md-raised md-accent md-icon-button title-card-action' v-if='isLoggedIn'
+                       @click='removeThisTitle'>
               <delete/>
             </md-button>
           </md-card-actions>

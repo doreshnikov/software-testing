@@ -8,11 +8,11 @@
     <div class='form'>
       <md-field>
         <label>Login</label>
-        <md-input v-model='formData.login' autofocus></md-input>
+        <md-input class='login-page-login' v-model='formData.login' autofocus></md-input>
       </md-field>
       <md-field md-has-password>
         <label>Password</label>
-        <md-input v-model='formData.password' type='password'></md-input>
+        <md-input class='login-page-password' v-model='formData.password' type='password'></md-input>
       </md-field>
       <div class='md-error' v-if='error != null'>
         {{ error }}

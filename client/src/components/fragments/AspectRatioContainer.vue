@@ -1,7 +1,7 @@
 <template>
   <div class='aspect-ratio-container' :style='style'>
     <div class='aspect-ratio-data'>
-      <slot />
+      <slot/>
     </div>
   </div>
 </template>
@@ -10,12 +10,7 @@
 export default {
   name: 'AspectRatioContainer',
   props: {
-    ratio: Number,
-    src: String,
-    alt: {
-      type: String,
-      default: 'Image'
-    }
+    ratio: Number
   },
   computed: {
     style() {

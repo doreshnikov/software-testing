@@ -1,7 +1,7 @@
 <template>
   <div>
     <md-subheader>
-      <md-button class='md-raised' @click='loadTitles()'>Refresh</md-button>
+      <md-button class='md-raised home-page-refresh' @click='loadTitles()'>Refresh</md-button>
     </md-subheader>
     <new-title-card v-if='isLoggedIn'></new-title-card>
     <title-card v-for='t in titles' :key='t.id' :title='t'></title-card>
