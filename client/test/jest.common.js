@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+import VueRouter from 'vue-router'
 
 export default {
 
@@ -34,6 +35,12 @@ export default {
             actions: transform(actions, k)
         })
         return new Vuex.Store({modules: modules})
+    },
+
+    router(path) {
+        const router = new VueRouter()
+        router.replace(path)
+        return router
     }
 
 }

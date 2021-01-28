@@ -13,7 +13,7 @@
     <div v-if='isLoaded'>
       <title-preview :title='loadedTitle'></title-preview>
     </div>
-    <div v-else-if='urlValid'>
+    <div v-else-if='urlValid && !error'>
       <md-progress-spinner md-mode='indeterminate' :md-diameter='30' :md-stroke='3'></md-progress-spinner>
     </div>
     <div v-if='!isLoaded && !urlValid && url || error'>
@@ -28,6 +28,7 @@
 
 <script>
 import TitlePreview from '@/components/pages/title/TitlePreview'
+import {extractError} from '@/service/utils'
 
 function checkUrl(url) {
   let regex = /^(https?:\/\/)?myanimelist.net\/manga\/(?<loc>[/\w\d-]+)$/g
@@ -41,7 +42,7 @@ export default {
     return {
       url: '',
       isLoaded: false,
-      title: Object,
+      title: null,
       error: null
     }
   },
@@ -75,15 +76,22 @@ export default {
   },
   methods: {
     loadTitle(locator) {
-      this.error = null
+      this.isLoaded = false
       this.$http.get(`/titles/mal/${locator}`).then(r => {
         if (locator === this.urlLocator) {
-          this.title = r.data
+          if (r.data.name !== undefined) {
+            this.title = r.data
+            this.error = null
+            this.isLoaded = true
+          } else {
+            this.error = 'Invalid title name'
+          }
         }
       }).catch(err => {
-        this.error = err.error
-      }).finally(() => {
-        this.isLoaded = true
+        this.error = extractError(err).error
+        if (this.error.message) {
+          this.error = this.error.message
+        }
       })
     },
     addTitle() {

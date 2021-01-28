@@ -30,6 +30,7 @@ export const userStore = {
                     context.commit('login', r.data.login)
                     localStorage.setItem('accessToken', r.data.accessToken)
                     localStorage.setItem('refreshToken', r.data.refreshToken)
+                    return r.data
                 },
                 e => Promise.reject(extractError(e))
             )

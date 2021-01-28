@@ -66,7 +66,6 @@ export default {
   min-width: 180px;
   width: calc(20vw - 25px);
   min-height: 252px;
-  height: calc(28vw - 35px);
   display: inline-block;
   vertical-align: top;
   margin: 10px;

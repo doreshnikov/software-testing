@@ -41,11 +41,7 @@ export const titlesStore = {
                 () => {
                     context.commit('removeTitle', titleId)
                 },
-                e => {
-                    let error = extractError(e)
-                    console.log(`Error on 'removeTitle': ${error.error}`)
-                    return Promise.reject(error)
-                }
+                e => Promise.reject(extractError(e))
             )
         },
         addTitle(context, title) {
@@ -54,12 +50,9 @@ export const titlesStore = {
                 r => {
                     title.id = r.data.id
                     context.commit('addTitle', title)
+                    return r.data.id
                 },
-                e => {
-                    let error = extractError(e)
-                    console.log(`Error on 'addTitle': ${error.error}`)
-                    return Promise.reject(error)
-                }
+                e => Promise.reject(extractError(e))
             )
         }
     }
