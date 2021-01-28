@@ -1,7 +1,6 @@
-import VueRouter from 'vue-router'
 import {mount, shallowMount} from '@vue/test-utils'
 import LoginPage from '@/components/pages/login/LoginPage'
-import common from '../../common'
+import common from '../../jest.common'
 
 describe('login-page', () => {
     const credentials = {
@@ -23,7 +22,7 @@ describe('login-page', () => {
         expect(wrapper.find('.md-error').text()).toBe('errormessage')
     })
     it('handles auth correctly', async () => {
-        const router = new VueRouter()
+        const router = common.router('/login')
         const replaceSpy = jest.spyOn(router, 'replace')
         const loginAction = jest.fn(() => Promise.resolve())
         const wrapper = shallowMount(LoginPage, {

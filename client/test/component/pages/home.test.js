@@ -2,7 +2,7 @@ import {mount, shallowMount} from '@vue/test-utils'
 import TitleCard from '@/components/pages/home/TitleCard'
 import HomePage from '@/components/pages/home/HomePage'
 
-import common from '../../common'
+import common from '../../jest.common'
 
 describe('title-card', () => {
     let computed

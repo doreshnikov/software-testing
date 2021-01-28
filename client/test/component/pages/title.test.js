@@ -3,7 +3,7 @@ import TitlePreview from '@/components/pages/title/TitlePreview'
 import TitlePage from '@/components/pages/title/TitlePage'
 
 import VueRouter from 'vue-router'
-import common from '../../common'
+import common from '../../jest.common'
 
 describe('title-preview', () => {
     it('renders info', () => {
@@ -36,7 +36,11 @@ describe('title-page', () => {
         expect(wrapper.find('md-progress-spinner-stub').element).toBeDefined()
     })
     it('renders title-preview.vue', async () => {
-        const wrapper = shallowMount(TitlePage, {data: data, propsData: props})
+        const wrapper = shallowMount(TitlePage, {
+            data: data,
+            propsData: props,
+            router: common.router('/title')
+        })
         wrapper.setData({isLoaded: true})
         await wrapper.vm.$nextTick()
         expect(wrapper.find('md-progress-spinner-stub').element).toBeUndefined()
@@ -49,7 +53,7 @@ describe('title-page', () => {
             data: data,
             propsData: props,
             store: common.store({}, {}, {'alerts/setFetchError': () => null}),
-            router: new VueRouter()
+            router: common.router('/title')
         })
         await wrapper.vm.$nextTick()
         expect(spy).toBeCalled()

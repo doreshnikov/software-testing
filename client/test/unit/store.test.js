@@ -86,12 +86,14 @@ describe('integrity', () => {
     describe('titles store (actions)', () => {
         it('commits new title on add', async () => {
             $axios.put.mockImplementation(() => Promise.resolve({data: {id: 1}}))
-            await expect(localStore.dispatch('titles/addTitle', {})).resolves
+            await expect(localStore.dispatch('titles/addTitle', {}))
+                .resolves.toEqual(1)
             expect(localStore.state.titles['titles'][0].id).toBe(1)
         })
         it('ignores new title on fail', async () => {
             $axios.put.mockImplementation(() => Promise.reject({toString: () => 'errormessage'}))
-            await expect(localStore.dispatch('titles/addTitle', {})).rejects
+            await expect(localStore.dispatch('titles/addTitle', {}))
+                .rejects.toEqual({error: 'errormessage'})
             expect(localStore.state.titles['titles'].length).toBe(0)
         })
     })
@@ -100,7 +102,8 @@ describe('integrity', () => {
             $axios.post.mockImplementation(() => Promise.resolve({
                 data: {login: 'y', accessToken: 'a', refreshToken: 'b'}
             }))
-            await expect(localStore.dispatch('user/login', {login: 'x'})).resolves
+            await expect(localStore.dispatch('user/login', {login: 'x'}))
+                .resolves.toHaveProperty('accessToken')
             expect(localStore.state.user['login']).toBe('y')
             expect(localStorage.getItem('accessToken')).toBe('a')
             expect(localStorage.getItem('refreshToken')).toBe('b')
@@ -108,7 +111,8 @@ describe('integrity', () => {
         it('keeps tokens on logout fail', async () => {
             $axios.post.mockImplementation(() => Promise.reject({toString: () => 'errormessage'}))
             localStorage.setItem('accessToken', 't')
-            await expect(localStore.dispatch('user/logout')).rejects
+            await expect(localStore.dispatch('user/logout'))
+                .rejects.toEqual({error: 'errormessage'})
             expect(localStorage.getItem('accessToken')).toBe('t')
         })
     })
