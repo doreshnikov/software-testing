@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-js/db/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/server-js/db/db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-js/routes/titles.js" beforeDir="false" afterPath="$PROJECT_DIR$/server-js/routes/titles.js" afterDir="false" />
-    </list>
+    <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +59,7 @@
       <recent name="C:\Users\jetbrains\manga-reader\client" />
     </key>
   </component>
-  <component name="RunManager" selected="Cypress.e2e cypress">
+  <component name="RunManager" selected="npm.test">
     <configuration name="authenticated user" type="CypressConfigurationType" factoryName="Cypress" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="envs">
@@ -98,73 +90,6 @@
       <option name="npmRef" value="Project" />
       <option name="kind" value="TEST" />
       <option name="interactive" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="e2e cypress" type="CypressConfigurationType" factoryName="Cypress" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" value="" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="workingDirectory" value="C:\Users\jetbrains\manga-reader\client" />
-      <option name="textRange" />
-      <option name="allNames" />
-      <option name="specsDir" value="C:\Users\jetbrains\manga-reader\client\test" />
-      <option name="specFile" />
-      <option name="testName" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$/client" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="additionalParams" value="" />
-      <option name="passParentEnvs" value="true" />
-      <option name="nodeJsRef" value="project" />
-      <option name="npmRef" value="Project" />
-      <option name="kind" value="DIRECTORY" />
-      <option name="interactive" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/client" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method v="2" />
-    </configuration>
-    <configuration name="serve" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="serve" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server-js/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
       <method v="2" />
     </configuration>
     <configuration name="test:e2e:c" type="js.build_tools.npm" nameIsGenerated="true">
@@ -214,7 +139,7 @@
       <workItem from="1611664186043" duration="17995000" />
       <workItem from="1611766885641" duration="20786000" />
       <workItem from="1611794018592" duration="1507000" />
-      <workItem from="1611795826938" duration="14772000" />
+      <workItem from="1611795826938" duration="15153000" />
     </task>
     <servers />
   </component>
