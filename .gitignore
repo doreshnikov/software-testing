@@ -6,7 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Toxic waste -_-
 client/cypress
+*.sqlite
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -39,3 +41,12 @@ jspm_packages/
 # dotenv environment variables file
 .env
 .env.test
+
+# Ktor/Java
+build/
+.gradle/
+out/
+
+# Local properties
+release.properties
+local.properties

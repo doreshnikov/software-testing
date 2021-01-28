@@ -1,0 +1,40 @@
+name: Client e2e testing CI
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 14.x, 15.x ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install client deps and start
+        working-directory: client
+        run: |
+          npm install
+          npm run serve
+      - name: Install server deps and start
+        working-directory: server-js
+        run: |
+          npm install
+          npm run start
+
+      - name: Run Playwright tests
+        working-directory: client
+        run: npm run test:e2e:p
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v2

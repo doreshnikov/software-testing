@@ -1,0 +1,33 @@
+name: Client unit/component testing CI
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 14.x, 15.x ]
+
+    defaults:
+      run:
+        working-directory: client
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install deps
+        run: npm install
+
+      - name: Run tests
+        run: npm run test:uc
