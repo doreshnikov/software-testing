@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test.client.e2e.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.client.e2e.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -174,7 +173,7 @@
       <workItem from="1611766885641" duration="20786000" />
       <workItem from="1611794018592" duration="1507000" />
       <workItem from="1611795826938" duration="33670000" />
-      <workItem from="1611841798958" duration="5284000" />
+      <workItem from="1611841798958" duration="5582000" />
     </task>
     <servers />
   </component>
