@@ -7,10 +7,10 @@
     "build": "vue-cli-service build",
     "deploy": "cd ../server-js && npm run start && cd ../client && npm run serve",
     "lint": "vue-cli-service lint",
-    "test:uc": "node_modules/.bin/jest",
-    "test:e2e:c": "npm run deploy && npx cypress run",
-    "test:e2e:p": "",
-    "test": "npm run test:uc && npm run test:e2e:c"
+    "test:uc": "jest test/unit test/component",
+    "test:e2e:c": "npx cypress run",
+    "test:e2e:p": "jest test/e2e/playwright",
+    "test": "jest && npm run test:e2e:c"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -74,7 +74,9 @@
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
-      "<rootDir>/test/(unit|component)/**/*.test.js"
+      "<rootDir>/test/unit/**/*.test.js",
+      "<rootDir>/test/component/**/*.test.js",
+      "<rootDir>/test/e2e/playwright/**/*.test.js"
     ],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",

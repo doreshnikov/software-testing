@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="" />
+    <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/home/TitleCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/home/TitleCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/title/NewTitlePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/title/NewTitlePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/modules/titles.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/modules/titles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/modules/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/jest.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/component/pages/home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/component/pages/home.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/component/pages/login.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/component/pages/login.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/component/pages/title.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/component/pages/title.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/e2e/playwright/playwright.setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/e2e/playwright/views.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/e2e/playwright/views.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/jest.setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/jest.setup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/unit/store.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/unit/store.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/test/unit/utils.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/unit/utils.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-js/db/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/server-js/db/db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-js/routes/titles.js" beforeDir="false" afterPath="$PROJECT_DIR$/server-js/routes/titles.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,7 +64,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/client/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\jetbrains\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\203.7148.54\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -60,36 +78,42 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.test">
-    <configuration name="authenticated user" type="CypressConfigurationType" factoryName="Cypress" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" value="--no-exit --headed " />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="workingDirectory" value="C:\Users\jetbrains\manga-reader\client" />
-      <option name="textRange" />
-      <option name="allNames">
-        <list>
-          <option value="authenticated user" />
-        </list>
-      </option>
-      <option name="specsDir" />
-      <option name="specFile" value="C:\Users\jetbrains\manga-reader\client\test\e2e\cypress\requests.test.js" />
-      <option name="testName" value="authenticated user" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$/client" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="additionalParams" value="--no-exit --headed " />
-      <option name="passParentEnvs" value="true" />
-      <option name="nodeJsRef" value="project" />
-      <option name="npmRef" value="Project" />
-      <option name="kind" value="TEST" />
-      <option name="interactive" value="false" />
+    <configuration name="axios.redirects to login on refresh fail" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
+      <test-names>
+        <test-name value="axios" />
+        <test-name value="redirects to login on refresh fail" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="axios.refreshes token on loss or expire" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
+      <test-names>
+        <test-name value="axios" />
+        <test-name value="refreshes token on loss or expire" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="e2e playwright" type="JavaScriptTestRunnerJest">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
       <method v="2" />
     </configuration>
     <configuration name="test:e2e:c" type="js.build_tools.npm" nameIsGenerated="true">
@@ -114,17 +138,21 @@
     </configuration>
     <list>
       <item itemvalue="Cypress.e2e cypress" />
-      <item itemvalue="Cypress.authenticated user" />
       <item itemvalue="Jest.All Tests" />
+      <item itemvalue="Jest.e2e playwright" />
+      <item itemvalue="Jest.axios.refreshes token on loss or expire" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.test:uc" />
       <item itemvalue="npm.test:e2e:c" />
       <item itemvalue="npm.serve" />
       <item itemvalue="npm.start" />
+      <item itemvalue="Jest.axios.redirects to login on refresh fail" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cypress.authenticated user" />
+        <item itemvalue="Jest.axios.redirects to login on refresh fail" />
+        <item itemvalue="Jest.axios.refreshes token on loss or expire" />
+        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +167,7 @@
       <workItem from="1611664186043" duration="17995000" />
       <workItem from="1611766885641" duration="20786000" />
       <workItem from="1611794018592" duration="1507000" />
-      <workItem from="1611795826938" duration="15153000" />
+      <workItem from="1611795826938" duration="31581000" />
     </task>
     <servers />
   </component>
