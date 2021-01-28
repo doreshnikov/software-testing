@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "test/e2e/cypress",
+  "retries": {
+    "runMode": 1
+  },
+  "video": true,
+  "baseUrl": "http://localhost:8080/#",
+  "chromeWebSecurity": false
+}

@@ -5,7 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "deploy": "cd ../server-js && npm run start && cd ../client && npm run serve",
+    "lint": "vue-cli-service lint",
+    "test:uc": "node_modules/.bin/jest",
+    "test:e2e:c": "npm run deploy && npx cypress run",
+    "test:e2e:p": "",
+    "test": "npm run test:uc && npm run test:e2e:c"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -27,10 +32,14 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
+    "cypress": "^6.3.0",
+    "cypress-localstorage-commands": "^1.4.0",
     "eslint": "^6.7.2",
+    "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-vue": "^6.2.2",
     "jest": "^26.6.3",
     "jest-transform-stub": "^2.0.0",
+    "playwright": "^1.8.0",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.11"
   },
@@ -41,6 +50,7 @@
     },
     "extends": [
       "plugin:vue/essential",
+      "plugin:cypress/recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
@@ -60,11 +70,11 @@
       "vue"
     ],
     "moduleNameMapper": {
-      "^vue-material-design-icons\/[\\w\\d$-]+/.vue$": "jest-transform-stub",
+      "^vue-material-design-icons/[\\w\\d$-]+/.vue$": "jest-transform-stub",
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
-      "<rootDir>/test/**/*.(spec|test).js"
+      "<rootDir>/test/(unit|component)/**/*.test.js"
     ],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
