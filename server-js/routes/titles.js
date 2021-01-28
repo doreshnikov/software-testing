@@ -42,14 +42,16 @@ router.put('/', auth.$check, function (req, res) {
         `insert into Title (name, description, image, chapters)
          values (?, ?, ?, ?)`,
         [title.name, title.description, title.image, title.chapters],
-        $db.customHandler(res, () => null)
-    )
-    let item = db.get(
-        `select id
-         from Title
-         where name = ?`,
-        [title.name],
-        $db.defaultHandler(res)
+        $db.customHandler(res, () => {
+            db.get(
+                `select id
+                 from Title
+                 where name = ?`,
+                [title.name],
+                $db.defaultHandler(res)
+            )
+            return null
+        })
     )
 })
 
