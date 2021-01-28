@@ -37,4 +37,5 @@ jobs:
         working-directory: client
         run: npm run test:e2e:p
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v2
+        working-directory: client
+        run: npm run test:e2e:c
