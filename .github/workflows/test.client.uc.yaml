@@ -2,9 +2,9 @@ name: Client unit/component testing CI
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ $default-branch, main ]
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ $default-branch, main ]
 
 jobs:
   build:
