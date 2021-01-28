@@ -28,7 +28,7 @@ router.get('/mal/:loc([\\d\\w/-]+)', function (req, res) {
     malParser.getTitle(req.params.loc).then(r => {
         res.json(r)
     }).catch(e => {
-        res.status(400).json({error: e})
+        res.status(404).json({error: e.message})
     })
 })
 
