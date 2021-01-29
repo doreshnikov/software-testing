@@ -1,4 +1,4 @@
-name: Client unit/component testing CI
+name: Client test [unit/component]
 
 on:
   push:

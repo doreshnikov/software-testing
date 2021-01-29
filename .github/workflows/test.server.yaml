@@ -1,4 +1,4 @@
-name: Ktor server testing CI
+name: Ktor server test [mashup]
 
 on:
   push:
