@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.server.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.server.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/test/controller/ApplicationTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/test/controller/ApplicationTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +220,7 @@
       <workItem from="1611841798958" duration="33857000" />
       <workItem from="1611901816527" duration="1040000" />
       <workItem from="1611910570757" duration="10840000" />
-      <workItem from="1611921711011" duration="1913000" />
+      <workItem from="1611921711011" duration="2298000" />
     </task>
     <servers />
   </component>

@@ -22,8 +22,8 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Install deps
-        run: npm install
+      - name: Fix ./gradlew problems
+        run: chmod +x gradlew
 
-      - name: Build with gradle
-        run: ./gradlew build
+      - name: Test with gradle
+        run: ./gradlew test
