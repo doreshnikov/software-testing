@@ -12,8 +12,8 @@
     <option name="workingDirectory" value="C:\Users\jetbrains\manga-reader\client" />
     <option name="textRange" />
     <option name="allNames" />
-    <option name="specsDir" value="C:\Users\jetbrains\manga-reader\client\test" />
-    <option name="specFile" />
+    <option name="specsDir" value="C:\Users\jetbrains\manga-reader\client\test\e2e\cypress" />
+    <option name="specFile" value="C:\Users\jetbrains\manga-reader\client\test\e2e\cypress\requests.test.js" />
     <option name="testName" />
     <option name="workingDirectory" value="file://$PROJECT_DIR$/client" />
     <option name="envs">
