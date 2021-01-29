@@ -26,12 +26,12 @@ exports.fail = fail
 exports.$check = function (req, res, next) {
     const header = req.headers.authorization
     if (!header) {
-        fail(res, 403, 'requested action requires authentication')
+        fail(res, 401, 'requested action requires authentication')
     } else {
         const accessToken = header.split(' ')[1]
         jwt.verify(accessToken, secret, (err, user) => {
             if (err) {
-                fail(res, 403, err)
+                fail(res, 401, err)
             } else {
                 req.user = user
                 next()
@@ -42,11 +42,11 @@ exports.$check = function (req, res, next) {
 exports.$refresh = function (req, res) {
     const refreshToken = req.body.refreshToken
     if (!refreshTokens.has(refreshToken)) {
-        fail(res, 401, 'refresh token wasn\'t issued or was invalidated')
+        fail(res, 403, 'refresh token wasn\'t issued or was invalidated')
     } else {
         jwt.verify(refreshToken, refreshSecret, (err, {user}) => {
             if (err) {
-                fail(res, 401, err)
+                fail(res, 403, err)
             } else {
                 res.json(issueToken(user))
             }

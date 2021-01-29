@@ -20,7 +20,7 @@ export function setupInterceptors(axiosInstance) {
             if (e.response) {
                 const refreshToken = localStorage.getItem('refreshToken')
                 switch (e.response.status) {
-                    case 401:
+                    case 403:
                         if (e.response.config.url.endsWith('/refresh')) {
                             localStorage.removeItem('accessToken')
                             localStorage.removeItem('refreshToken')
@@ -31,17 +31,19 @@ export function setupInterceptors(axiosInstance) {
                             store.commit('user/logout')
                         }
                         break
-                    case 403:
-                        if (refreshToken) {
-                            await userService(axiosInstance).refresh(refreshToken).then(r => {
-                                localStorage.setItem('accessToken', r.data.accessToken)
-                                localStorage.setItem('refreshToken', r.data.refreshToken)
-                            })
-                            return new Promise((resolve, reject) =>
-                                $axios.request(e.config).then(resolve).catch(reject)
-                            )
+                    case 401:
+                        if (!window.location.href.endsWith('/login')) {
+                            if (refreshToken) {
+                                await userService(axiosInstance).refresh(refreshToken).then(r => {
+                                    localStorage.setItem('accessToken', r.data.accessToken)
+                                    localStorage.setItem('refreshToken', r.data.refreshToken)
+                                })
+                                return new Promise((resolve, reject) =>
+                                    $axios.request(e.config).then(resolve).catch(reject)
+                                )
+                            }
+                            store.commit('alerts/setAccessError', e.response.data)
                         }
-                        store.commit('alerts/setAccessError', e.response.data)
                         store.commit('user/logout')
                         break
                     default:

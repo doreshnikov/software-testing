@@ -51,15 +51,15 @@ class UserController(private val service: UserService) : Controller {
             post("/refresh") {
                 val refreshToken = context.receive<RefreshTokenPayload>().refreshToken
                 if (refreshToken !in issuedRefreshTokens) {
-                    call.respond(HttpStatusCode.Unauthorized, "This refresh token wasn't issued or was invalidated")
+                    call.respond(HttpStatusCode.Forbidden, "This refresh token wasn't issued or was invalidated")
                 } else {
                     issuedRefreshTokens.remove(refreshToken)
                     val login = JWTInstance.verifier.verify(refreshToken).getClaim("login")
                     when {
                         login.isNull ->
-                            call.respond(HttpStatusCode.Unauthorized, "Invalid refresh token")
+                            call.respond(HttpStatusCode.Forbidden, "Invalid refresh token")
                         service.findByLogin(login.asString()) == null ->
-                            call.respond(HttpStatusCode.Unauthorized, "Invalid login")
+                            call.respond(HttpStatusCode.Forbidden, "Invalid login")
                         else ->
                             issueTokens(UserForm(login.asString()))
                     }

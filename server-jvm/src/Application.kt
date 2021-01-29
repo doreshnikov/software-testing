@@ -75,7 +75,6 @@ fun Application.module(testing: Boolean = false) {
 
         (titles.mountOn)("titles")
         (user.mountOn)("user")
-
     }
 
 }
