@@ -13,7 +13,6 @@ ITMO 7th term [Software Testing] course tasks
 ![Ktor server test [e2e]](https://github.com/doreshnikov/software-testing/workflows/Ktor%20server%20test%20%5Be2e%5D/badge.svg)
 
 ---
----
 
 ## Run
 
@@ -24,16 +23,12 @@ cd client && npm install
 npm run serve
 ```
 
----
-
 #### Run server (express.js version)
 
 ```bash
 cd server-js && npm install
 npm run start
 ```
-
----
 
 #### Run server (ktor version)
 
