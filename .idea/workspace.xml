@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.server.selenium.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.server.selenium.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/server-jvm">
@@ -21,9 +23,34 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/server-jvm">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -34,6 +61,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -56,10 +88,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,7 +101,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/client/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -76,90 +109,41 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jetbrains\manga-reader\server-jvm\test" />
+      <recent name="C:\Users\jetbrains\manga-reader\server-jvm\testresources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jetbrains\manga-reader\client\test\e2e\playwright" />
+      <recent name="C:\Users\jetbrains\manga-reader\server-jvm" />
+      <recent name="C:\Users\jetbrains\manga-reader\server-jvm\src" />
       <recent name="C:\Users\jetbrains\manga-reader" />
+      <recent name="C:\Users\jetbrains\manga-reader\client\test\e2e\playwright" />
       <recent name="C:\Users\jetbrains\manga-reader\client\test" />
-      <recent name="C:\Users\jetbrains\manga-reader\client\test\component\pages" />
-      <recent name="C:\Users\jetbrains\manga-reader\client" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="controller" />
+      <recent name="model" />
+      <recent name="model.payload" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.All Tests">
-    <configuration name="axios.redirects to login on refresh fail" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/client" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
-      <test-names>
-        <test-name value="axios" />
-        <test-name value="redirects to login on refresh fail" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="axios.refreshes token on loss or expire" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/client" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
-      <test-names>
-        <test-name value="axios" />
-        <test-name value="refreshes token on loss or expire" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="e2e playwright" type="JavaScriptTestRunnerJest">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/client" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test:e2e:c" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:e2e:c" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test:uc" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:uc" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.server-jvm [test selenium]">
     <list>
+      <item itemvalue="Cypress.e2e cypress" />
+      <item itemvalue="Docker.db only" />
+      <item itemvalue="Docker.server+postgres" />
+      <item itemvalue="Docker.test server+containers" />
+      <item itemvalue="Gradle.server-jvm [clean build allureReport]" />
+      <item itemvalue="Gradle.server-jvm [run]" />
+      <item itemvalue="Gradle.server-jvm [test]" />
+      <item itemvalue="Gradle.server-jvm [test selenium]" />
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.e2e playwright" />
-      <item itemvalue="Jest.axios.refreshes token on loss or expire" />
-      <item itemvalue="Jest.axios.redirects to login on refresh fail" />
+      <item itemvalue="Application.ApplicationKt" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.test:uc" />
-      <item itemvalue="npm.test:e2e:c" />
       <item itemvalue="npm.serve" />
       <item itemvalue="npm.start" />
+      <item itemvalue="npm.test:uc" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Jest.axios.redirects to login on refresh fail" />
-        <item itemvalue="Jest.axios.refreshes token on loss or expire" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -173,7 +157,12 @@
       <workItem from="1611766885641" duration="20786000" />
       <workItem from="1611794018592" duration="1507000" />
       <workItem from="1611795826938" duration="33670000" />
-      <workItem from="1611841798958" duration="5582000" />
+      <workItem from="1611841798958" duration="33857000" />
+      <workItem from="1611901816527" duration="1040000" />
+      <workItem from="1611910570757" duration="10840000" />
+      <workItem from="1611921711011" duration="9776000" />
+      <workItem from="1611931648632" duration="3855000" />
+      <workItem from="1611935674224" duration="1196000" />
     </task>
     <servers />
   </component>
@@ -194,6 +183,32 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/server-jvm/src/db/init-db.kt</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/server-jvm/test/service/HttpClientServiceTest.kt</url>
+          <line>31</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/server-jvm/src/service/TitlesService.kt</url>
+          <line>59</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="doc.select(&quot;span.h1-title &gt; span[itemprop=\&quot;name\&quot;]&quot;).textNodes()" language="kotlin" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

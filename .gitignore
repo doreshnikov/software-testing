@@ -46,6 +46,7 @@ jspm_packages/
 build/
 .gradle/
 out/
+.allure/
 
 # Local properties
 release.properties

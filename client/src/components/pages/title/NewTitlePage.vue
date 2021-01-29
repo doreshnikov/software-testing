@@ -89,7 +89,9 @@ export default {
         }
       }).catch(err => {
         this.error = extractError(err).error
-        if (this.error.message) {
+        if (!this.error) {
+          this.error = err
+        } else if (this.error.message) {
           this.error = this.error.message
         }
       })

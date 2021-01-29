@@ -1,23 +1,29 @@
 package doreshnikov
 
+import com.fasterxml.jackson.databind.SerializationFeature
+import doreshnikov.common.JWTInstance
+import doreshnikov.controller.TitlesController
+import doreshnikov.controller.UserController
+import doreshnikov.db.initDB
+import doreshnikov.db.initDBFromFile
+import doreshnikov.service.TitlesService
+import doreshnikov.service.UserService
 import io.ktor.application.*
-import io.ktor.response.*
-import io.ktor.request.*
-import io.ktor.features.*
-import org.slf4j.event.*
-import io.ktor.routing.*
-import io.ktor.http.*
 import io.ktor.auth.*
-import com.fasterxml.jackson.databind.*
+import io.ktor.auth.jwt.*
+import io.ktor.features.*
+import io.ktor.http.*
 import io.ktor.jackson.*
-import io.ktor.client.*
-import io.ktor.client.engine.apache.*
+import io.ktor.request.*
+import io.ktor.routing.*
+import org.slf4j.event.Level
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
+
     install(CallLogging) {
         level = Level.INFO
         filter { call -> call.request.path().startsWith("/") }
@@ -25,16 +31,36 @@ fun Application.module(testing: Boolean = false) {
 
     install(CORS) {
         method(HttpMethod.Options)
+        method(HttpMethod.Get)
+        method(HttpMethod.Post)
         method(HttpMethod.Put)
         method(HttpMethod.Delete)
-        method(HttpMethod.Patch)
+
         header(HttpHeaders.Authorization)
-        header("MyCustomHeader")
+        header(HttpHeaders.AccessControlAllowOrigin)
+        header(HttpHeaders.AccessControlAllowHeaders)
+
         allowCredentials = true
+        allowNonSimpleContentTypes = true
         anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
     }
 
+    val userService = UserService.Default()
+    val titlesService = TitlesService.Default()
+
     install(Authentication) {
+        jwt {
+            verifier(JWTInstance.verifier)
+            realm = "doreshnikov.manga-reader"
+            validate { credential ->
+                val login = credential.payload.getClaim("login")
+                when {
+                    login.isNull -> null
+                    userService.findByLogin(login.asString()) == null -> null
+                    else -> JWTPrincipal(credential.payload)
+                }
+            }
+        }
     }
 
     install(ContentNegotiation) {
@@ -43,17 +69,18 @@ fun Application.module(testing: Boolean = false) {
         }
     }
 
-    val client = HttpClient(Apache) {
+    if (!testing) {
+        val driver = System.getenv("db-driver") ?: "h2"
+        initDBFromFile("resources/datasource.${driver}.properties")
     }
 
     routing {
-        get("/") {
-            call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
-        }
+        val titles = TitlesController(titlesService)
+        val user = UserController(userService)
 
-        get("/json/jackson") {
-            call.respond(mapOf("hello" to "world"))
-        }
+        (titles.mountOn)("titles")
+        (user.mountOn)("user")
     }
+
 }
 
