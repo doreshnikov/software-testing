@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test.server.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.server.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__clean_build_allureReport_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__test_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__test_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REPORT.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-jvm/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-jvm/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +133,7 @@
       <recent name="model.payload" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ApplicationTest">
+  <component name="RunManager" selected="Gradle.server-jvm [clean build allureReport]">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -139,57 +145,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server-jvm" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;controller.ApplicationTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="HttpClientServiceTest.parsesCorrectly" type="GradleRunConfiguration" factoryName="Gradle" temporary="true" nameIsGenerated="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server-jvm" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;service.HttpClientServiceTest.parsesCorrectly&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Cypress.e2e cypress" />
       <item itemvalue="Docker.db only" />
       <item itemvalue="Docker.server+postgres" />
       <item itemvalue="Docker.test server+containers" />
+      <item itemvalue="Gradle.server-jvm [clean build allureReport]" />
       <item itemvalue="Gradle.server-jvm [run]" />
       <item itemvalue="Gradle.server-jvm [test]" />
-      <item itemvalue="Gradle.HttpClientServiceTest.parsesCorrectly" />
-      <item itemvalue="Gradle.ApplicationTest" />
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.e2e playwright" />
       <item itemvalue="Application.ApplicationKt" />
@@ -198,12 +161,6 @@
       <item itemvalue="npm.start" />
       <item itemvalue="npm.test:uc" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.ApplicationTest" />
-        <item itemvalue="Gradle.HttpClientServiceTest.parsesCorrectly" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -220,7 +177,7 @@
       <workItem from="1611841798958" duration="33857000" />
       <workItem from="1611901816527" duration="1040000" />
       <workItem from="1611910570757" duration="10840000" />
-      <workItem from="1611921711011" duration="2298000" />
+      <workItem from="1611921711011" duration="4636000" />
     </task>
     <servers />
   </component>

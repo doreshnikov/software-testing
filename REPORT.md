@@ -1,3 +1,7 @@
+# Homework reports
+
+---
+
 ## Homework 1
 
 #### Main
@@ -7,15 +11,11 @@
 * ✔️ 5 страниц (+рутинг)
 * ✔️ unit-тесты и компонентные тесты (_jest_, _@vue/test-utils_)
 
----
-
 #### Advanced
 
 * ✔️ авторизация (`jwt` + `localStorage`, _Vuex_)
     * есть тесты для проверки авторизации на компонентном уровне
 * ✔️ достаточно много наборов тестов
-
----
 
 #### Bonus
 
@@ -61,15 +61,11 @@ jest_ с _@vue/test-utils_.
     * тесты на стили и внешний вид сервиса
     * тесты на нетривиальные сюжеты взаимодействия пользователя и сервиса
 
----
-
 #### Advanced
 
 * ✔️ e2e тесты с единоразовым прохождением авторизации
     * на _Cypress_ &ndash; мучение с сохранением `localStorage`
     * на _Playwright_ достаточно просто адекватно пользоваться `beforeAll(...)`
-
----
 
 #### Bonus
 
@@ -108,6 +104,7 @@ npm run test:e2e
     * [`views.test.js`](client/test/e2e/playwright/views.test.js)
       тестирование внешнего вида компонент (формально не являются e2e-тестами, однако не могут быть без реальной
       отрисовки компонент)
+---
 
 ### Немного фактов
 
@@ -153,7 +150,6 @@ npm run test:e2e
 нет такого удобного debugger-like окружения, которое сильно помогло в случае с
 _Cypress_.
 
-
 ---
 
 ## Homework 3
@@ -170,8 +166,6 @@ _Cypress_.
     * было некуда их приделывать, потому что repository-прослойкой между базой данных и сервисом является ORM и DAO, а
       соответственно мокировать особо нечего
     * вместо этого есть тесты с использованием _MockClient_ для мокирования общения с внешним сервисом
-
----
 
 #### Advanced
 
@@ -196,10 +190,43 @@ _Cypress_.
 * [`DBServiceTest`](server-jvm/test/service/DBServiceTest.kt) компонентные тесты сервисов
 * [`HttpClientServiceTest`](server-jvm/test/service/HttpClientServiceTest.kt) тест с моком внешнего сервиса (MAL)
 
+---
+
 ## Homework 4
+
+#### Main
 
 * ✔️ созданы _GitHub Actions_ для запуска тестов UI
     * [`test.client.uc.yaml`](.github/workflows/test.client.uc.yaml) unit и component тесты
     * [`test.client.e2e.yaml`](.github/workflows/test.client.e2e.yaml) e2e тесты с разверткой _Express.js_-бэкэнда
-* ❌ пока нет тестов бэкэнда
-* ❌ пока нет CD на Azure/etc
+* ✔️ создан _GitHub Action_ для запуска тестов BE
+    * [`test.server.yaml`](.github/workflows/test.server.yaml) полный набор тестов
+
+#### Advanced
+
+* ❌ **пока что** нет CD на Azure
+
+---
+
+## Homework5
+
+#### Bonus
+
+* ✔️ настроены _Allure reports_ для тестов BE
+* ❌ на данный момент нет _GitHub Action_ для размещения в Pages
+
+---
+
+```bash
+cd server-jvm
+./gradlew build allureReport
+chrome ./build/reports/allure-report/index.html
+```
+
+---
+
+## Homework 6
+
+#### Main
+
+* ❌ e2e тесты с использованием _Selenide_ в процессе

@@ -1,11 +1,16 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import io.qameta.allure.gradle.AllureExtension
+
 val ktorVersion: String by project
 val kotlinVersion: String by project
 val exposedVersion: String by project
 val jupiterVersion: String by project
+val allureVersion: String by project
 
 plugins {
     application
     kotlin("jvm") version "1.4.21"
+    id("io.qameta.allure") version "2.8.1"
 }
 
 group = "doreshnikov"
@@ -54,6 +59,8 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter:1.15.1")
     testImplementation("org.testcontainers:postgresql:1.15.1")
     testImplementation("org.mockito:mockito-inline:3.7.7")
+
+    testImplementation("io.qameta.allure:allure-java-commons:$allureVersion")
 }
 
 kotlin.sourceSets["main"].kotlin.srcDirs("src")
@@ -62,10 +69,25 @@ kotlin.sourceSets["test"].kotlin.srcDirs("test")
 sourceSets["main"].resources.srcDirs("resources")
 sourceSets["test"].resources.srcDirs("testresources")
 
-tasks.test {
+tasks.withType(Test::class) {
     useJUnitPlatform()
+
+    systemProperty("junit.jupiter.execution.parallel.enabled", "true")
+    systemProperty("junit.jupiter.execution.parallel.config.strategy", "dynamic")
+    systemProperty("junit.jupiter.extensions.autodetection.enabled", "true")
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+configure<AllureExtension> {
+    autoconfigure = true
+    version = allureVersion
+
+    clean = true
+
+    useJUnit5 {
+        version = allureVersion
+    }
 }
