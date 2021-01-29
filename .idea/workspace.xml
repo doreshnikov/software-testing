@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/ApplicationKt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/db_only.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/e2e_playwright.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__run_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__test_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_postgres.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/test_server_containers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/test_uc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/e2e_cypress.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/e2e_cypress.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.server.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.server.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REPORT.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/test/e2e/cypress/authentication.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/e2e/cypress/authentication.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/test/e2e/cypress/requests.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/test/e2e/cypress/requests.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/resources/datasource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/resources/datasource.h2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/src/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/src/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/src/controller/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/src/controller/UserController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/src/db/init-db.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/src/db/init-db.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/src/model/UserForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/src/model/UserForm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/src/service/TitlesService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/src/service/TitlesService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/src/service/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/src/service/UserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/test/ApplicationTest.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +220,7 @@
       <workItem from="1611841798958" duration="33857000" />
       <workItem from="1611901816527" duration="1040000" />
       <workItem from="1611910570757" duration="10840000" />
-      <workItem from="1611921711011" duration="1426000" />
+      <workItem from="1611921711011" duration="1612000" />
     </task>
     <servers />
   </component>
