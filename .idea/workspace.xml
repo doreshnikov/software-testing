@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__test_selenium_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test.client.e2e.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.client.e2e.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test.client.uc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.client.uc.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test.server.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.server.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.server.selenium.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.server.selenium.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REPORT.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,19 +130,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.server-jvm [test selenium]">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Cypress.e2e cypress" />
       <item itemvalue="Docker.db only" />
@@ -182,7 +164,8 @@
       <workItem from="1611901816527" duration="1040000" />
       <workItem from="1611910570757" duration="10840000" />
       <workItem from="1611921711011" duration="9776000" />
-      <workItem from="1611931648632" duration="3645000" />
+      <workItem from="1611931648632" duration="3855000" />
+      <workItem from="1611935674224" duration="441000" />
     </task>
     <servers />
   </component>

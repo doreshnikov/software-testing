@@ -25,11 +25,13 @@ jobs:
       - name: Fix ./gradlew problems
         run: chmod +x gradlew
 
-      - name: Run server
-        run: ./gradlew run
-      - name: Run client
+      - name: Start server
+        run: ./gradlew run &
+      - name: Install client deps and start
         working-directory: client
-        run: npm run serve
+        run: |
+          npm install
+          npm run serve &
 
       - name: Test Selenium with gradle
         run: ./gradlew test -Pselenium
