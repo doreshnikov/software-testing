@@ -10,10 +10,9 @@ import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 
-fun initDB(properties: String) {
-    val config = HikariConfig(properties)
+fun initDB(config: HikariConfig): Database {
     val hikari = HikariDataSource(config)
-    Database.connect(hikari)
+    val db = Database.connect(hikari)
 
     transaction {
         SchemaUtils.createMissingTablesAndColumns(UserTable, TitleTable)
@@ -29,4 +28,11 @@ fun initDB(properties: String) {
             passwordHash = CryptoHash.encode("password")
         }
     }
+
+    return db
+}
+
+fun initDBFromFile(properties: String): Database {
+    val config = HikariConfig(properties)
+    return initDB(config)
 }

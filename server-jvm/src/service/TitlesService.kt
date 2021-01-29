@@ -27,9 +27,9 @@ interface TitlesService {
 
     fun remove(id: Int): Boolean
 
-    companion object Default : TitlesService {
+    open class Default : TitlesService {
 
-        private val client = HttpClient(Apache) {
+        protected open val client = HttpClient(Apache) {
             install(Logging) {
                 logger =  Logger.DEFAULT
                 level = LogLevel.NONE
@@ -58,10 +58,9 @@ interface TitlesService {
                 else -> {
                     val html = response.readText()
                     val doc = Jsoup.parse(html)
-                    val name = doc.select("span.h1-title:first-of-type > span[itemprop=\"name\"]").text()
                     return Title(
-                        findByName(name)?.id,
-                        name,
+                        null,
+                        doc.select("span.h1-title > span[itemprop=\"name\"]").textNodes()[0].text(),
                         doc.select("span[itemprop=\"description\"]").text(),
                         doc.select("div:contains('Chapters:')").text().let {
                             val value = it.filter { c -> c in '0'..'9' }

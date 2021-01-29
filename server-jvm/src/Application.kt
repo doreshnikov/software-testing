@@ -5,6 +5,7 @@ import doreshnikov.common.JWTInstance
 import doreshnikov.controller.TitlesController
 import doreshnikov.controller.UserController
 import doreshnikov.db.initDB
+import doreshnikov.db.initDBFromFile
 import doreshnikov.service.TitlesService
 import doreshnikov.service.UserService
 import io.ktor.application.*
@@ -44,6 +45,9 @@ fun Application.module(testing: Boolean = false) {
         anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
     }
 
+    val userService = UserService.Default()
+    val titlesService = TitlesService.Default()
+
     install(Authentication) {
         jwt {
             verifier(JWTInstance.verifier)
@@ -52,7 +56,7 @@ fun Application.module(testing: Boolean = false) {
                 val login = credential.payload.getClaim("login")
                 when {
                     login.isNull -> null
-                    UserService.findByLogin(login.asString()) == null -> null
+                    userService.findByLogin(login.asString()) == null -> null
                     else -> JWTPrincipal(credential.payload)
                 }
             }
@@ -66,12 +70,13 @@ fun Application.module(testing: Boolean = false) {
     }
 
     if (!testing) {
-        initDB("resources/datasource.properties")
+        val driver = System.getenv("db-driver") ?: "h2"
+        initDBFromFile("resources/datasource.${driver}.properties")
     }
 
     routing {
-        val titles = TitlesController(TitlesService.Default)
-        val user = UserController(UserService.Default)
+        val titles = TitlesController(titlesService)
+        val user = UserController(userService)
 
         (titles.mountOn)("titles")
         (user.mountOn)("user")

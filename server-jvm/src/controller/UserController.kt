@@ -40,7 +40,7 @@ class UserController(private val service: UserService) : Controller {
                 val user = context.receive<UserForm>().also { it.validate() }
                 when {
                     service.findByLogin(user.login) == null ->
-                        call.respond(HttpStatusCode.Unauthorized, "Invalid login")
+                        call.respond(HttpStatusCode.Unauthorized, "Unknown login")
                     !service.checkCredentials(user.login, CryptoHash.encode(user.password)) ->
                         call.respond(HttpStatusCode.Unauthorized, "Wrong password")
                     else ->

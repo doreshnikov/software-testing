@@ -12,7 +12,7 @@ interface UserService {
 
     fun checkCredentials(login: String, passwordHash: String): Boolean
 
-    companion object Default : UserService {
+    open class Default : UserService {
 
         override fun findByLogin(login: String): User? = transaction {
             UserEntity.find { UserTable.login eq login }.firstOrNull()?.let { User(it) }
