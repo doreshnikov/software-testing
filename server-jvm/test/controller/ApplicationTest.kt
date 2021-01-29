@@ -108,7 +108,6 @@ class ApplicationTest {
     inner class RestrictedFeatures {
         private val jwtToken = JWTInstance.issueAccessToken(UserForm("admin"))
         private val testTitle = Title(
-            id = 42,
             name = "Re:Creators",
             description = "Good plot, lol",
             chapters = null,
@@ -128,7 +127,10 @@ class ApplicationTest {
 
                 handleRequest(HttpMethod.Get, "/titles").apply {
                     assertEquals(HttpStatusCode.OK, response.status())
-                    assertEquals(objectMapper.writeValueAsString(listOf(testTitle)), response.content)
+                    val data = response.content ?: fail("Expected non-null content")
+                    val item = data.substring(2, data.length - 2)
+                    val title = objectMapper.readValue(item, Title::class.java).copy(id = null)
+                    assertEquals(testTitle, title)
                 }
             }
         }
