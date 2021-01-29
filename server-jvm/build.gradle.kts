@@ -27,6 +27,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
 
     implementation("ch.qos.logback:logback-classic:1.2.1")
@@ -41,6 +42,7 @@ dependencies {
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-core-jvm:$ktorVersion")
     implementation("io.ktor:ktor-client-apache:$ktorVersion")
+
     implementation("org.jsoup:jsoup:1.13.1")
 
     implementation("com.zaxxer:HikariCP:4.0.1")
@@ -49,7 +51,6 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     implementation("org.postgresql:postgresql:42.2.2")
     implementation("com.h2database:h2:1.4.200")
-
 
     testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
     testImplementation("io.ktor:ktor-client-mock:$ktorVersion")
@@ -61,6 +62,8 @@ dependencies {
     testImplementation("org.mockito:mockito-inline:3.7.7")
 
     testImplementation("io.qameta.allure:allure-java-commons:$allureVersion")
+
+    testImplementation("org.seleniumhq.selenium:selenium-java:3.141.59")
 }
 
 kotlin.sourceSets["main"].kotlin.srcDirs("src")
@@ -69,12 +72,23 @@ kotlin.sourceSets["test"].kotlin.srcDirs("test")
 sourceSets["main"].resources.srcDirs("resources")
 sourceSets["test"].resources.srcDirs("testresources")
 
-tasks.withType(Test::class) {
+tasks.withType<Test> {
     useJUnitPlatform()
 
     systemProperty("junit.jupiter.execution.parallel.enabled", "true")
     systemProperty("junit.jupiter.execution.parallel.config.strategy", "dynamic")
     systemProperty("junit.jupiter.extensions.autodetection.enabled", "true")
+
+    try {
+        project.property("selenium")
+        filter {
+            includeTestsMatching("*Selenium*")
+        }
+    } catch (e: groovy.lang.MissingPropertyException) {
+        filter {
+            excludeTestsMatching("*Selenium*")
+        }
+    }
 }
 
 tasks.withType<KotlinCompile>().configureEach {

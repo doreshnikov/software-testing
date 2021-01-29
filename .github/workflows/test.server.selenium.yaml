@@ -1,0 +1,35 @@
+name: Ktor server test [e2e]
+
+on:
+  push:
+    branches: [ $default-branch, main ]
+  pull_request:
+    branches: [ $default-branch, main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: server-jvm
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Java8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Fix ./gradlew problems
+        run: chmod +x gradlew
+
+      - name: Run server
+        run: ./gradlew run
+      - name: Run client
+        working-directory: client
+        run: npm run serve
+
+      - name: Test Selenium with gradle
+        run: ./gradlew test -Pselenium

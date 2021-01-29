@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__clean_build_allureReport_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__test_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__test_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_jvm__test_selenium_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.client.e2e.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.client.e2e.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.client.uc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.client.uc.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.server.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.server.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REPORT.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-jvm/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-jvm/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -108,7 +109,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/client/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -133,14 +134,16 @@
       <recent name="model.payload" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.server-jvm [clean build allureReport]">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.server-jvm [test selenium]">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,6 +156,7 @@
       <item itemvalue="Gradle.server-jvm [clean build allureReport]" />
       <item itemvalue="Gradle.server-jvm [run]" />
       <item itemvalue="Gradle.server-jvm [test]" />
+      <item itemvalue="Gradle.server-jvm [test selenium]" />
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.e2e playwright" />
       <item itemvalue="Application.ApplicationKt" />
@@ -177,7 +181,8 @@
       <workItem from="1611841798958" duration="33857000" />
       <workItem from="1611901816527" duration="1040000" />
       <workItem from="1611910570757" duration="10840000" />
-      <workItem from="1611921711011" duration="4636000" />
+      <workItem from="1611921711011" duration="9776000" />
+      <workItem from="1611931648632" duration="3645000" />
     </task>
     <servers />
   </component>
