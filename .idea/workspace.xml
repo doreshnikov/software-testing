@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12674365-c32c-4c69-84f3-994cf99dcf00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/REPORT.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/fragments/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/fragments/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/login/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/login/LoginPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/title/NewTitlePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/title/NewTitlePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/service/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/service/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-jvm/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-jvm/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-jvm/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-jvm/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-jvm/src/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server-jvm/src/Application.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +33,29 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server-jvm" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -34,6 +66,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -56,6 +93,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
@@ -83,8 +121,23 @@
       <recent name="C:\Users\jetbrains\manga-reader\client\test\component\pages" />
       <recent name="C:\Users\jetbrains\manga-reader\client" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="model" />
+      <recent name="model.payload" />
+    </key>
   </component>
-  <component name="RunManager" selected="Jest.All Tests">
+  <component name="RunManager" selected="Application.ApplicationKt">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="axios.redirects to login on refresh fail" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -123,6 +176,19 @@
       <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
       <method v="2" />
     </configuration>
+    <configuration name="ApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="server-jvm.main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="doreshnikov.ApplicationKt" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/server-jvm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test:e2e:c" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -148,6 +214,7 @@
       <item itemvalue="Jest.e2e playwright" />
       <item itemvalue="Jest.axios.refreshes token on loss or expire" />
       <item itemvalue="Jest.axios.redirects to login on refresh fail" />
+      <item itemvalue="Application.ApplicationKt" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.test:uc" />
       <item itemvalue="npm.test:e2e:c" />
@@ -156,6 +223,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApplicationKt" />
         <item itemvalue="Jest.axios.redirects to login on refresh fail" />
         <item itemvalue="Jest.axios.refreshes token on loss or expire" />
       </list>
@@ -173,7 +241,7 @@
       <workItem from="1611766885641" duration="20786000" />
       <workItem from="1611794018592" duration="1507000" />
       <workItem from="1611795826938" duration="33670000" />
-      <workItem from="1611841798958" duration="7716000" />
+      <workItem from="1611841798958" duration="30359000" />
     </task>
     <servers />
   </component>
@@ -194,6 +262,20 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/server-jvm/src/service/TitlesService.kt</url>
+          <line>52</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

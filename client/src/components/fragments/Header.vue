@@ -59,9 +59,7 @@ export default {
   },
   methods: {
     logout() {
-      this.$http.post('/user/logout').then(() => {
-        this.$store.commit('user/logout')
-      })
+      this.$store.dispatch('user/logout')
     },
     clearError() {
       this.$store.commit('alerts/setFetchError', null)
