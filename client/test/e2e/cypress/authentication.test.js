@@ -25,12 +25,12 @@ describe('authentication', () => {
     }
 
     it('fails on wrong login', () => {
-        auth('@', '#')
+        auth('wrong', 'also wrong')
         cy.wait(200)
         cy.get('div').contains('Unknown login').should('exist')
     })
     it('fails on wrong password', () => {
-        auth('admin', '#')
+        auth('admin', 'wrong')
         cy.wait(200)
         cy.get('div').contains('Wrong password').should('exist')
     })

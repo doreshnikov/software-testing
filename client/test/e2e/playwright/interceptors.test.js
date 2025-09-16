@@ -34,7 +34,7 @@ describe('axios', () => {
     }
 
     beforeAll(async () => {
-        browser = await chromium.launch({headless: true, slowMo: 1})
+        browser = await chromium.launch({headless: true, slowMo: 1 })
     })
     afterAll(async () => {
         await browser.close()

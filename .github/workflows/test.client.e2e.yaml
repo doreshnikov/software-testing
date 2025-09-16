@@ -1,4 +1,4 @@
-name: Client e2e testing CI
+name: Client test [e2e]
 
 on:
   push:

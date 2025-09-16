@@ -16,7 +16,7 @@ describe('authenticated user', () => {
     })
 
     function captureBottom(name) {
-        cy.scrollTo('bottom')
+        cy.scrollTo('bottom', {ensureScrollable: false})
         cy.screenshot(`resources/${name}`)
     }
 

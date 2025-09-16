@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="e2e playwright" type="JavaScriptTestRunnerJest">
+    <node-interpreter value="project" />
+    <node-options value="" />
+    <jest-package value="$PROJECT_DIR$/client/node_modules/jest" />
+    <working-dir value="$PROJECT_DIR$/client" />
+    <envs />
+    <scope-kind value="TEST_FILE" />
+    <test-file value="$PROJECT_DIR$/client/test/e2e/playwright/interceptors.test.js" />
+    <method v="2" />
+  </configuration>
+</component>
